@@ -1,0 +1,15 @@
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\bin\Debug\net8.0\AutomaticSinMachine.exe
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\bin\Debug\net8.0\AutomaticSinMachine.deps.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\bin\Debug\net8.0\AutomaticSinMachine.runtimeconfig.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\bin\Debug\net8.0\AutomaticSinMachine.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\bin\Debug\net8.0\AutomaticSinMachine.pdb
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.AssemblyInfoInputs.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.AssemblyInfo.cs
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.csproj.CoreCompileInputs.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.sourcelink.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\refint\AutomaticSinMachine.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.pdb
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\AutomaticSinMachine.genruntimeconfig.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\AutomaticSinMachine\obj\Debug\net8.0\ref\AutomaticSinMachine.dll
