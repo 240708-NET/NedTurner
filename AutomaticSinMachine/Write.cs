@@ -1,8 +1,10 @@
-class Write(Random rando, Messages messages)
+class Write(Random rando, Messages messages, UserFate user)
 {
 
     readonly Random rand = rando;
     readonly Messages messages = messages;
+
+    UserFate user = user;
 
     public void PrintMessageXTimes(List<string> listOfMessages,int timesToPrint,string printSpeed){
   
@@ -17,25 +19,60 @@ class Write(Random rando, Messages messages)
         }
 
     }
-    // public void PrintThreeMessages(List<string> listOfMessages){
-  
-    //     for(int i=0;i<3;i++){
-    //         int toChoose = rand.Next(listOfMessages.Count-1);
-    //         SlowLineBriefPause(listOfMessages[toChoose]);
-    //         listOfMessages.Remove(listOfMessages[toChoose]);
-    //     }
 
-    // }
+    public void PrintSassyMessage(){
+        int toChoose = rand.Next(this.messages.sassMessages.Count-1);
+            SlowLineBriefPause(this.messages.sassMessages[toChoose]);
+            this.messages.sassMessages.Remove(this.messages.sassMessages[toChoose]);
+    }
 
-    public void AcceptValues(string requestValueMessage){
+    public string AcceptValues(string requestValueMessage){
         
         SlowWrite(requestValueMessage);
             #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-        string name = Console.ReadLine();
+        string readValue = Console.ReadLine();
+        // ensure that the value entered was not null
+        readValue = CheckIfVoid(requestValueMessage, readValue);
             #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+
         Thread.Sleep(500);
         PrintMessageXTimes(messages.sassMessages,1,"fast");
         Console.WriteLine();
+        return readValue;
+    }
+
+    public string CheckIfVoid(string requestValueMessage, string readValue){
+        int count=0;
+        while(string.IsNullOrEmpty(readValue)){
+            if(count==0){
+                SlowWrite($"Really, {requestValueMessage}");
+            }else if (count==1){
+                SlowWrite($"No, Seriously, {requestValueMessage}");
+            }else if (count==2){
+                SlowWrite($"No, I Mean It, {requestValueMessage}");
+            }else if (count==3){
+                SlowWrite($"Last Chance, {requestValueMessage}");
+            }else{
+                SlowWrite($"You asked for it");
+                Thread.Sleep(500);
+                Console.WriteLine();
+                return " ";
+            }
+            count++;
+                #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+            readValue = Console.ReadLine();
+                #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+
+        }
+        return readValue;
+    }
+
+    public int AcquireAge(string ageString){
+        ageString.Trim();
+        if(Int32.TryParse(ageString,out int extractedAge)){
+            return extractedAge;
+        }
+        return 0;
     }
 
 

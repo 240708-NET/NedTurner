@@ -5,7 +5,8 @@ class Program{
 
     Random rand = new();
     Messages messages = new();
-    Write writer = new(rand,messages);
+    UserFate user = new();
+    Write writer = new(rand,messages,user);
 
     Console.WriteLine(@"
     
@@ -27,6 +28,8 @@ class Program{
         Console.ReadLine();
         Console.Clear();
         
+        
+        
 
         writer.PrintMessageXTimes(messages.bootMessages,3,"slow");
 
@@ -37,16 +40,21 @@ class Program{
         Console.WriteLine();
 
 
-        writer.AcceptValues("Reveal Name: ");
+        user.name = writer.AcceptValues("Reveal Name: ");
         
-        writer.AcceptValues("Enter Age: ");
+        user.age = writer.AcquireAge(writer.AcceptValues("Enter Age: "));
 
-        writer.AcceptValues("Favourite Colour: ");
+        user.color = writer.AcceptValues("Favourite Colour: ");
 
         
         
 
         Console.Clear();
+        user.CalculateSinMeter();
+        Write.SlowWrite($"{user.name}'s Current Sin Value: {user.sinMeter} / 5 ");Console.WriteLine();
+        Write.SlowWrite($"Your Sin Will Now Be Calculated...");Console.WriteLine();
+        
+        Write.TimedWrite(". . . ",400);Console.WriteLine();
         writer.PrintMessageXTimes(messages.computeMessages,3,"slow");
 
         // Thread.Sleep(2000);

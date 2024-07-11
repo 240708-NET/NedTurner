@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutomaticSinMachine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e71709776bb3c3d0e5d3c6f1247fa72c77c01a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a912db9f9ff1082e5fa5bb9f9ae4d36c143efc43")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutomaticSinMachine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutomaticSinMachine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
