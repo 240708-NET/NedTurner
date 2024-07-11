@@ -3,8 +3,9 @@
 class Program{
     static void Main(string[] args){
 
-    Sins sins = new Sins();
-    Write writer = new Write();
+    Random rand = new();
+    Messages messages = new();
+    Write writer = new(rand,messages);
 
     Console.WriteLine(@"
     
@@ -21,54 +22,49 @@ class Program{
             
             ");
 
-        Thread.Sleep(200);
-        writer.FastLineMediumPause("Press Enter To Continue");
+        Thread.Sleep(1500);
+        Write.FastLineMediumPause("Press Enter To Continue");
         Console.ReadLine();
         Console.Clear();
         
 
-        writer.PrintThreeMessages(writer.bootMessages);
+        writer.PrintMessageXTimes(messages.bootMessages,3,"slow");
 
         Console.Clear();
 
         
-        writer.FastLineMediumPause("Begin Judgment!");
+        Write.FastLineMediumPause("Begin Judgment!");
+        Console.WriteLine();
 
-        writer.SlowWrite("Reveal Name: ");
-        string name = Console.ReadLine();
-        writer.FastLineMediumPause("Yikes");
+
+        writer.AcceptValues("Reveal Name: ");
         
+        writer.AcceptValues("Enter Age: ");
 
-        writer.SlowWrite("Enter Age: ");
-        string age = Console.ReadLine();
-        writer.FastLineMediumPause("Sorry about that");
+        writer.AcceptValues("Favourite Colour: ");
 
-        
-        writer.SlowWrite("Favourite Colour: ");
-        string colour = Console.ReadLine();
-        writer.FastLineMediumPause("Ew");
         
         
 
         Console.Clear();
-        writer.PrintThreeMessages(writer.computeMessages);
+        writer.PrintMessageXTimes(messages.computeMessages,3,"slow");
 
         // Thread.Sleep(2000);
 
-        writer.TimedWrite(". . . . .",400);
+        Write.TimedWrite(". . . ",400);
+    
+//                                 ,.        ,.      ,.
+//                                 ||        ||      ||  ()
+//  ,--. ,-. ,.,-.  ,--.,.,-. ,-.  ||-.,.  ,.|| ,-.  ||-.,. ,-. ,.,-.  ,--.
+// //`-'//-\\||/|| //-||||/`'//-\\ ||-'||  ||||//-\\ ||-'||//-\\||/|| ((`-'
+// ||   || |||| ||||  ||||   || || ||  || /|||||| || ||  |||| |||| ||  ``.
+// \\,-.\\-//|| || \\-||||   \\-|| ||  ||//||||\\-|| ||  ||\\-//|| || ,-.))
+//  `--' `-' `' `'  `-,|`'    `-^-``'  `-' `'`' `-^-``'  `' `-' `' `' `--'
+//                   //           
+//               ,-.//          
+//               `--'  ");
+        Console.WriteLine(messages.completeMessages[rand.Next(messages.completeMessages.Count-1)]);
 
-        Console.WriteLine(@"
-        
-                                ,.        ,.      ,.
-                                ||        ||      ||  ()
- ,--. ,-. ,.,-.  ,--.,.,-. ,-.  ||-.,.  ,.|| ,-.  ||-.,. ,-. ,.,-.  ,--.
-//`-'//-\\||/|| //-||||/`'//-\\ ||-'||  ||||//-\\ ||-'||//-\\||/|| ((`-'
-||   || |||| ||||  ||||   || || ||  || /|||||| || ||  |||| |||| ||  ``.
-\\,-.\\-//|| || \\-||||   \\-|| ||  ||//||||\\-|| ||  ||\\-//|| || ,-.))
- `--' `-' `' `'  `-,|`'    `-^-``'  `-' `'`' `-^-``'  `' `-' `' `' `--'
-                  //           
-              ,-.//          
-              `--'  ");
         
 
         Console.Write("Sin Assigned! Press To Progress!");
@@ -76,16 +72,14 @@ class Program{
 
         Console.Clear();
 
-        writer.SlowWrite("Your Sin Is: ");
+        Write.SlowWrite("Your Sin Is: ");
         
-        
-        Thread.Sleep(2000);
-        
-        Thread.Sleep(1500);
+        Write.SlowWrite(". . . . . . . . . . . . . . . . ");
+        Console.WriteLine();
 
-        writer.PrintSin();
+        Console.WriteLine(messages.sinList[rand.Next(messages.sinList.Count-1)]);
 
-        writer.RevealSins();
+        writer.RevealAllContents(messages.sinList);
 
 
     }
