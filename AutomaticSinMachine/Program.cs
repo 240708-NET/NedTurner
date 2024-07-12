@@ -51,10 +51,11 @@ class Program{
 
         Console.Clear();
         user.CalculateSinMeter();
-        Write.SlowWrite($"{user.name}'s Current Sin Value: {user.sinMeter} / 5 ");Console.WriteLine();
-        Write.SlowWrite($"Your Sin Will Now Be Calculated...");Console.WriteLine();
-        
-        Write.TimedWrite(". . . ",400);Console.WriteLine();
+        Write.SlowWrite($"{user.name}'s Current Sin Value: ");Thread.Sleep(500);Write.TimedWrite($"{user.sinMeter} / 5 ",300);Console.WriteLine();
+        Console.WriteLine();
+        Write.SlowWrite($"{user.name}'s Sin Will Now Be Calculated...");Console.WriteLine();
+        Console.WriteLine();
+        Thread.Sleep(1500);
         writer.PrintMessageXTimes(messages.computeMessages,3,"slow");
 
         // Thread.Sleep(2000);
@@ -80,7 +81,7 @@ class Program{
 
         Console.Clear();
 
-        Write.SlowWrite("Your Sin Is: ");
+        Write.SlowWrite($"{user.name}'s Sin Is: ");
         
         Write.SlowWrite(". . . . . . . . . . . . . . . . ");
         Console.WriteLine();
