@@ -32,6 +32,7 @@ class Program{
         
 
         writer.PrintMessageXTimes(messages.bootMessages,3,"slow");
+        Console.WriteLine();
 
         writer.ConsoleClearDot(consoleClearValid);
 
