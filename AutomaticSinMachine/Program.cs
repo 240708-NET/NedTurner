@@ -25,15 +25,15 @@ class Program{
 
         Thread.Sleep(1500);
         Write.FastLineMediumPause("Press Enter To Continue");
-        Console.ReadLine();
-        Console.Clear();
+        bool consoleClearValid = writer.ConsoleClearOnOrOff();
+        writer.ConsoleClearDot(consoleClearValid);
         
         
         
 
         writer.PrintMessageXTimes(messages.bootMessages,3,"slow");
 
-        Console.Clear();
+        writer.ConsoleClearDot(consoleClearValid);
 
         
         Write.FastLineMediumPause("Begin Judgment!");
@@ -49,7 +49,7 @@ class Program{
         
         
 
-        Console.Clear();
+        writer.ConsoleClearDot(consoleClearValid);
         user.CalculateSinMeter();
         Write.SlowWrite($"{user.name}'s Current Sin Value: ");Thread.Sleep(500);Write.TimedWrite($"{user.sinMeter} / 5 ",300);Console.WriteLine();
         Console.WriteLine();
@@ -79,7 +79,7 @@ class Program{
         Console.Write("Sin Assigned! Press To Progress!");
         Console.ReadLine();
 
-        Console.Clear();
+        writer.ConsoleClearDot(consoleClearValid);
 
         Write.SlowWrite($"{user.name}'s Sin Is: ");
         
