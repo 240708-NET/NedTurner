@@ -118,9 +118,9 @@ class Write(Random rando, Messages messages, UserFate user)
     public bool ConsoleClearOnOrOff(){
         string yesOrNo = Console.ReadLine();
         if(string.IsNullOrEmpty(yesOrNo)){
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     public void ConsoleClearDot(bool yesOrNo){
