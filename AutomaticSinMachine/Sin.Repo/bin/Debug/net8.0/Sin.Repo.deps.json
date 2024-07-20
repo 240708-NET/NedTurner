@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Sin.Repo/1.0.0": {
+        "runtime": {
+          "Sin.Repo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sin.Repo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
