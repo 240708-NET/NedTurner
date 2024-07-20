@@ -1,0 +1,15 @@
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\bin\Debug\net8.0\CsvReader.exe
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\bin\Debug\net8.0\CsvReader.deps.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\bin\Debug\net8.0\CsvReader.runtimeconfig.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\bin\Debug\net8.0\CsvReader.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\bin\Debug\net8.0\CsvReader.pdb
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.AssemblyInfoInputs.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.AssemblyInfo.cs
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.csproj.CoreCompileInputs.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.sourcelink.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\refint\CsvReader.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.pdb
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\CsvReader.genruntimeconfig.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvReader\obj\Debug\net8.0\ref\CsvReader.dll

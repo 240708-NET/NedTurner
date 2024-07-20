@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvReader\\CsvReader.csproj",
+      "projectUniqueName": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvMagicReader\\CsvReader\\CsvReader.csproj",
       "projectName": "CsvReader",
-      "projectPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvReader\\CsvReader.csproj",
+      "projectPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvMagicReader\\CsvReader\\CsvReader.csproj",
       "packagesPath": "C:\\Users\\nedtu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvReader\\obj\\",
+      "outputPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvMagicReader\\CsvReader\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nedtu\\AppData\\Roaming\\NuGet\\NuGet.Config"
