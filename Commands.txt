@@ -1,5 +1,14 @@
 
 
+----CREATE CLASS LIBRARY
+dotnet new classlib -n <name>.Repo
+
+---CREATE SOLUTION
+dotnet new sln -n CsvReader
+dotnet sln add <path to csproj or directory in which there is only one csproj>
+----add reference (while within the directory that will be referencing the other directory)
+dotnet add reference <path to directory>
+
 
 dotnet tool install --global dotnet-ef
 dotnet tool update --global dotnet-ef

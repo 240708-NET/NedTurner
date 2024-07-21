@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "CsvReader.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CsvReader.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CsvReader.Models.dll": {}
+        }
+      },
+      "CsvReader.Repo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CsvReader.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CsvReader.Repo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CsvReader.Repo.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CsvReader.Models/1.0.0": {
+      "type": "project",
+      "path": "../CsvReader.Models/CsvReader.Models.csproj",
+      "msbuildProject": "../CsvReader.Models/CsvReader.Models.csproj"
+    },
+    "CsvReader.Repo/1.0.0": {
+      "type": "project",
+      "path": "../CsvReader.Repo/CsvReader.Repo.csproj",
+      "msbuildProject": "../CsvReader.Repo/CsvReader.Repo.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "CsvReader.Models >= 1.0.0",
+      "CsvReader.Repo >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\nedtu\\.nuget\\packages\\": {}
@@ -31,7 +69,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvMagicReader\\CsvReader.Models\\CsvReader.Models.csproj": {
+              "projectPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvMagicReader\\CsvReader.Models\\CsvReader.Models.csproj"
+            },
+            "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvMagicReader\\CsvReader.Repo\\CsvReader.Repo.csproj": {
+              "projectPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\NedTurner\\CsvMagicReader\\CsvReader.Repo\\CsvReader.Repo.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

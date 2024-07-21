@@ -1,0 +1,16 @@
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.csproj.AssemblyReference.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.AssemblyInfoInputs.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.AssemblyInfo.cs
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.csproj.CoreCompileInputs.cache
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.sourcelink.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\bin\Debug\net8.0\CsvReader.Repo.deps.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\bin\Debug\net8.0\CsvReader.Repo.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\bin\Debug\net8.0\CsvReader.Repo.pdb
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\bin\Debug\net8.0\CsvReader.Models.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\bin\Debug\net8.0\CsvReader.Models.pdb
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReade.B44E773B.Up2Date
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\refint\CsvReader.Repo.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.pdb
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\ref\CsvReader.Repo.dll
