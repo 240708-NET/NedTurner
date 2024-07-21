@@ -1,12 +1,16 @@
-﻿namespace CsvReader.Models;
+﻿
+using System.ComponentModel.DataAnnotations;
+
+namespace CsvReader.Models
+{
 
 public class Tip : IObject
 {
 
     public static string csvFirstLine = "order_id,day,time,size,smoker,sex,total_bill,tip";
 
-    // [Key]
-    public int? order_id {get;set;}
+    [Key]
+    public int order_id {get;set;}
     public string day {get;set;}
     public string time {get;set;}
     public int size {get;set;}
@@ -117,4 +121,5 @@ public class Tip : IObject
         return $"{this.order_id},{this.day},{this.time},{this.size},{smokeType},{this.sex},{this.total_bill},{this.tip}";
     }
 
+}
 }

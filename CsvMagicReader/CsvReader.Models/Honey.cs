@@ -1,7 +1,13 @@
+
+using System.ComponentModel.DataAnnotations;
+
 namespace CsvReader.Models
 {
     public class Honey : IObject
     {
+
+        [Key]
+        public int id {get;set;}
 
         public Honey(){}
 

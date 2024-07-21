@@ -5,7 +5,7 @@ namespace CsvReader.Repo
 
 public class CsvLooker : IRepo
 {
-        static string basePath = "../../Project1_CSV/";
+        static string basePath = "../Files/Csv_Files/";
         static Tip tipper = new();
 
         public CsvLooker()
@@ -32,21 +32,21 @@ public class CsvLooker : IRepo
         }
 
         
-        public List<IObject> GetAll(IObject lister, string filePath)
-        {
-            List<IObject> objectList = new();
+        // public List<IObject> GetAll(IObject lister, string filePath)
+        // {
+        //     List<IObject> objectList = new();
 
-            List<List<string>> tipStringList = ReadEntireCsv(filePath);
-            tipStringList.RemoveAt(0);
+        //     List<List<string>> tipStringList = ReadEntireCsv(filePath);
+        //     tipStringList.RemoveAt(0);
 
-            foreach(List<string> rawTip in tipStringList)
-            {
-                // tips.Add(Tip.ListToTip(rawTip));
-                objectList.Add(lister.ListToObject(rawTip));
-            }
-            return objectList;
+        //     foreach(List<string> rawTip in tipStringList)
+        //     {
+        //         // tips.Add(Tip.ListToTip(rawTip));
+        //         objectList.Add(lister.ListToObject(rawTip));
+        //     }
+        //     return objectList;
 
-        }
+        // }
 
         public void SaveAllTips(List<Tip> tipList)
         {
@@ -88,15 +88,16 @@ public class CsvLooker : IRepo
         }
 
 
-        public void DeleteTipById(int id)
+        public bool DeleteTipById(int id)
         {
             List<Tip> tipList = GetAllTips();
 
             int index = tipList.FindIndex(tip=> tip.order_id == id);
-            if(index!=1) 
+            if(index!=-1) 
             {
                 tipList.RemoveAt(index);
                 SaveAllTips(tipList);
+                return true;
             }
             else throw new Exception("ID not found");
 

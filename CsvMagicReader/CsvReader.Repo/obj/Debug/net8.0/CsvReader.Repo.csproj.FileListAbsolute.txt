@@ -14,3 +14,5 @@ C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Rep
 C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\refint\CsvReader.Repo.dll
 C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.pdb
 C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\ref\CsvReader.Repo.dll
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\bin\Debug\net8.0\CsvReader.Repo.runtimeconfig.json
+C:\Users\nedtu\Documents\RevatureTraining\NedTurner\CsvMagicReader\CsvReader.Repo\obj\Debug\net8.0\CsvReader.Repo.genruntimeconfig.cache
