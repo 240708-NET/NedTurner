@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvReader.Repo", "CsvReader
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvReader.Models", "CsvReader.Models\CsvReader.Models.csproj", "{62CBF190-8D2D-4C9B-B67F-3B753AE50FA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiReader", "ApiReader\ApiReader.csproj", "{DE4AD161-DA08-4813-9E55-C78EFBA89CB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{62CBF190-8D2D-4C9B-B67F-3B753AE50FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62CBF190-8D2D-4C9B-B67F-3B753AE50FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62CBF190-8D2D-4C9B-B67F-3B753AE50FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE4AD161-DA08-4813-9E55-C78EFBA89CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4AD161-DA08-4813-9E55-C78EFBA89CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4AD161-DA08-4813-9E55-C78EFBA89CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4AD161-DA08-4813-9E55-C78EFBA89CB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
