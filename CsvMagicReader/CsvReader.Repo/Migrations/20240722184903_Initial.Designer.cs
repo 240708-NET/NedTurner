@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CsvReader.Repo.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240721161601_CreateDatabases")]
-    partial class CreateDatabases
+    [Migration("20240722184903_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,15 +39,18 @@ namespace CsvReader.Repo.Migrations
 
             modelBuilder.Entity("CsvReader.Models.Tip", b =>
                 {
-                    b.Property<int>("order_id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("order_id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<string>("day")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("order_id")
+                        .HasColumnType("int");
 
                     b.Property<string>("sex")
                         .IsRequired()
@@ -69,7 +72,7 @@ namespace CsvReader.Repo.Migrations
                     b.Property<float>("total_bill")
                         .HasColumnType("real");
 
-                    b.HasKey("order_id");
+                    b.HasKey("id");
 
                     b.ToTable("Tips");
                 });

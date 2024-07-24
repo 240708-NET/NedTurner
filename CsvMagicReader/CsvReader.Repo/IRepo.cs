@@ -10,7 +10,7 @@ namespace CsvReader.Repo
         public Tip GetTipById(int id);
         public void SaveTip(Tip tipToSave);
         public bool DeleteTipById(int id);
-        // public void DeleteAllTips();
+        public void DeleteAllTips();
 
         
     }

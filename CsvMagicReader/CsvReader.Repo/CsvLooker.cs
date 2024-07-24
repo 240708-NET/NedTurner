@@ -142,6 +142,8 @@ public class CsvLooker : IRepo
             return csvContents;
             }
         }
+        
+        public void DeleteAllTips(){}
 
 }
 }

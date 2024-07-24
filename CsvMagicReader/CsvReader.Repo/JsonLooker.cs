@@ -66,6 +66,6 @@ namespace CsvReader.Repo
 
             
         }
-        // public void DeleteAllTips();
+        public void DeleteAllTips(){}
     }
 }

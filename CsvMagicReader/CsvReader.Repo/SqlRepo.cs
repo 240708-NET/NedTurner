@@ -1,4 +1,5 @@
 using CsvReader.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CsvReader.Repo
 {
@@ -91,6 +92,19 @@ namespace CsvReader.Repo
 
 
             } 
+        }
+        public void DeleteAllTips()
+        {
+            using(var context = new DataContext())
+            {
+
+                foreach(Tip tip in context.Tips)
+                { 
+                    context.Tips.Remove(tip);
+                }
+                    context.SaveChanges();
+            } 
+
         }
 
     }

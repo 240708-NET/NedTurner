@@ -26,8 +26,9 @@ namespace CsvReader.Repo.Migrations
                 name: "Tips",
                 columns: table => new
                 {
-                    order_id = table.Column<int>(type: "int", nullable: false)
+                    id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    order_id = table.Column<int>(type: "int", nullable: false),
                     day = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     time = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     size = table.Column<int>(type: "int", nullable: false),
@@ -38,7 +39,7 @@ namespace CsvReader.Repo.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tips", x => x.order_id);
+                    table.PrimaryKey("PK_Tips", x => x.id);
                 });
         }
 

@@ -10,6 +10,7 @@ public class Tip : IObject
     public static string csvFirstLine = "order_id,day,time,size,smoker,sex,total_bill,tip";
 
     [Key]
+    public int id {get;set;}
     public int order_id {get;set;}
     public string day {get;set;}
     public string time {get;set;}
