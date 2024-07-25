@@ -5,13 +5,17 @@ namespace CsvReader.Repo
 {
     public class SqlRepo : IRepo
     {
+
+        DataContext context;
+
+        public SqlRepo()
+        {
+            context = new DataContext();
+        }
         
         public List<Tip> GetAllTips()
         {
-            using(var context = new DataContext())
-            {
                 return context.Tips.ToList();
-            }
         }
         // public List<IObject> GetAll(IObject lister, string filePath)
         // {
@@ -22,8 +26,6 @@ namespace CsvReader.Repo
         // }
         public void SaveAllTips(List<Tip> tipList)
         {
-            using(var context = new DataContext())
-            {
                 foreach(Tip tip in tipList)
                 {
                     Tip? savedTip = context.Tips.Find(tip.order_id);
@@ -43,20 +45,14 @@ namespace CsvReader.Repo
                     }
                 }
                 context.SaveChanges();
-            }
         }
         public Tip GetTipById(int id)
         {
-            using(var context = new DataContext())
-            {
                 Tip? tip = context.Tips.Find(id);
                 return tip;
-            } 
         }
         public void SaveTip(Tip tipToSave)
         {
-            using(var context = new DataContext())
-            {
                 Tip? savedTip = context.Tips.Find(tipToSave.order_id);
 
                 if(savedTip != null)
@@ -74,13 +70,11 @@ namespace CsvReader.Repo
                 }
                 
                 context.SaveChanges();
-
-            }
         }
+
+
         public bool DeleteTipById(int id)
         {
-            using(var context = new DataContext())
-            {
                 var tip = context.Tips.Find(id); 
                 if(tip != null)
                 {
@@ -89,22 +83,14 @@ namespace CsvReader.Repo
                     return !context.Tips.Contains(tip);
                 }
                 return false;
-
-
-            } 
         }
         public void DeleteAllTips()
         {
-            using(var context = new DataContext())
-            {
-
                 foreach(Tip tip in context.Tips)
                 { 
                     context.Tips.Remove(tip);
                 }
                     context.SaveChanges();
-            } 
-
         }
 
     }

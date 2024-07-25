@@ -23,5 +23,20 @@ namespace ApiReader.Controllers
         {
             return _sqlRepo.GetAllTips();
         }
+
+        [HttpGet("tip/{id}")]
+        public ActionResult<Tip> GetTipById(int id)
+        {
+            return _sqlRepo.GetTipById(id);
+        }
+
+        // SaveTip(Tip tip)
+
+        // DeleteTipById(int id)
+
+        // DeleteAllTips()
+
+
+        // public VVV LoadTipsFromFile()
     }
 }
