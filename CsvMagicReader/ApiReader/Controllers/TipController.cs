@@ -11,10 +11,10 @@ namespace ApiReader.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IRepo _sqlRepo;
 
-        public TipController(ILogger<WeatherForecastController> logger)
+        public TipController(ILogger<WeatherForecastController> logger, IRepo repo)
         {
             _logger = logger;
-            _sqlRepo = new SqlRepo();
+            _sqlRepo = repo;
         }
 
 
@@ -32,11 +32,29 @@ namespace ApiReader.Controllers
 
         // SaveTip(Tip tip)
 
-        // DeleteTipById(int id)
+        [HttpDelete("tip/{id}")]
+        public ActionResult<bool> DeleteTipById(int id)
+        {
+            return _sqlRepo.DeleteTipById(id);
+        }
 
-        // DeleteAllTips()
+
+        [HttpDelete("tips")]
+        public ActionResult<bool> DeleteAllTips()
+        {
+            _sqlRepo.DeleteAllTips();
+            return true;
+        }
 
 
-        // public VVV LoadTipsFromFile()
+        // [HttpPost("tips")]
+        // public IEnumerable<Tip> LoadTipsFromFile()
+        // {
+        //     return _sqlRepo.L
+        // }
+
+
+
+        // public VVV SaveTipsToFile()
     }
 }

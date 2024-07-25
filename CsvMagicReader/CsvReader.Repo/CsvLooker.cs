@@ -16,8 +16,23 @@ public class CsvLooker : IRepo
 
         public List<Tip> GetAllTips()
         {
-            List<Tip> tips = new();
+            List<Tip> tips = [];
             string filePath = "tips.csv";
+
+            List<List<string>> tipStringList = ReadEntireCsv(filePath);
+            tipStringList.RemoveAt(0);
+
+            foreach(List<string> rawTip in tipStringList)
+            {
+                // tips.Add(Tip.ListToTip(rawTip));
+                tips.Add(tipper.ListToObject(rawTip));
+            }
+            return tips;
+
+        }
+        public List<Tip> GetAllTips(string filePath)
+        {
+            List<Tip> tips = [];
 
             List<List<string>> tipStringList = ReadEntireCsv(filePath);
             tipStringList.RemoveAt(0);

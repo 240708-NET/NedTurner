@@ -6,11 +6,18 @@ namespace CsvReader.Repo
     public class SqlRepo : IRepo
     {
 
-        DataContext context;
+        readonly DataContext context;
+        private readonly IRepo _csvRepo;
 
         public SqlRepo()
         {
             context = new DataContext();
+            _csvRepo = new CsvLooker();
+        }
+        public SqlRepo(string connectionString)
+        {
+            context = new DataContext();
+            _csvRepo = new CsvLooker();
         }
         
         public List<Tip> GetAllTips()
@@ -92,6 +99,19 @@ namespace CsvReader.Repo
                 }
                     context.SaveChanges();
         }
+
+        public List<Tip> LoadTipsFromFile()
+        {
+            List<Tip> tipsFromCsv = _csvRepo.GetAllTips();
+            SaveAllTips(tipsFromCsv);
+            return GetAllTips();
+        }
+        // public List<Tip> LoadTipsFromFile(string fileName)
+        // {
+        //     List<Tip> tipsFromCsv = _csvRepo.GetAllTips(fileName);
+        //     SaveAllTips(tipsFromCsv);
+        //     return GetAllTips();
+        // }
 
     }
 }
