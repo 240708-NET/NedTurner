@@ -43,6 +43,11 @@ namespace CsvReader.Repo
             }
             return foundTip.First();
         }
+        
+        public Tip GetTipByOrderId(int id)
+        {
+            return GetTipById(id);
+        }
         public void SaveTip(Tip tipToSave)
         {
             List<Tip> tipList = GetAllTips();
@@ -66,6 +71,17 @@ namespace CsvReader.Repo
 
             
         }
+        public bool DeleteTipByOrderId(int order_id)
+        {
+            return DeleteTipById(order_id);
+        }
+
+        
         public void DeleteAllTips(){}
+
+        public List<Tip> LoadTipsFromFile()
+        {
+            return GetAllTips();
+        }
     }
 }
