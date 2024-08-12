@@ -6,19 +6,21 @@ namespace CsvReader.Repo
     public class SqlRepo : IRepo
     {
 
-        readonly DataContext context;
+        private readonly DataContext context;
         private readonly IRepo _csvRepo;
+        private readonly IRepo _jsonRepo;
 
         public SqlRepo()
         {
             context = new DataContext();
             _csvRepo = new CsvLooker();
+            _jsonRepo = new JsonLooker("tips.json");
         }
-        public SqlRepo(string connectionString)
-        {
-            context = new DataContext();
-            _csvRepo = new CsvLooker();
-        }
+        // public SqlRepo(string connectionString)
+        // {
+        //     context = new DataContext();
+        //     _csvRepo = new CsvLooker();
+        // }
         
         public List<Tip> GetAllTips()
         {
@@ -52,11 +54,21 @@ namespace CsvReader.Repo
                     }
                 }
                 context.SaveChanges();
+                _csvRepo.SaveAllTips(tipList);
+                _jsonRepo.SaveAllTips(tipList);
+
         }
         public Tip GetTipById(int id)
         {
                 Tip? tip = context.Tips.Find(id);
                 return tip;
+        }
+        public Tip GetTipByOrderId(int id)
+        {
+                var tip = from t in context.Tips.ToList<Tip>()
+                            where t.order_id == id
+                            select t;
+                return tip.First();
         }
         public void SaveTip(Tip tipToSave)
         {
@@ -81,7 +93,7 @@ namespace CsvReader.Repo
 
 
         public bool DeleteTipById(int id)
-        {
+        {            
                 var tip = context.Tips.Find(id); 
                 if(tip != null)
                 {
@@ -90,6 +102,11 @@ namespace CsvReader.Repo
                     return !context.Tips.Contains(tip);
                 }
                 return false;
+        }
+        
+        public bool DeleteTipByOrderId(int order_id)
+        {
+            return DeleteTipById(GetTipByOrderId(order_id).id);
         }
         public void DeleteAllTips()
         {
