@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsvReader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6095444dc0f927adedbab31dce0190355a0cc333")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9bfd912107d313343bf4bd7a5e124da0ce3890f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsvReader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsvReader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

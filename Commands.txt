@@ -22,10 +22,45 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 --- user secrets
 dotnet user-secrets init
-dotnet user-secrets set ConnectionString "Server=localhost;Database=DemoDb;User=sa;Password=NotPassword123!;TrustCertificate=true;"
+dotnet user-secrets set ConnectionString "Server=localhost;Database=DemoDb;User=sa;Password=NotPassword123!;TrustServerCertificate=true;"
 dotnet user-secrets list
 
 
 dotnet ef migrations add Initial
 dotnet ef database update
 dotnet ef migrations add Update
+
+
+
+
+
+npm init
+npm install --save-dev jest
+(save dev ensures jest is only installed in the project)
+"test": "jest"
+npm run test
+npm run dev
+
+etc     
+
+npm install -g typescript
+
+
+=Create Next.js app
+npx create-next-app@latest
+
+=INSTALL REACT
+npm install next react react-dom
+npm 
+npm 
+
+npm install --save-dev typescript @types/react @types/node
+
+
+
+
+Before you write any React: https://react.dev/learn/thinking-in-react
+Some context before you start writing: https://react.dev/learn
+A pure React app: https://react.dev/learn/tutorial-tic-tac-toe
+A simple app from vanilla to React to Next.js: https://nextjs.org/learn/react-foundations
+A little more complex React with Next.js: https://nextjs.org/learn/dashboard-app
