@@ -11,14 +11,14 @@ namespace ApiReader.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IRepo _sqlRepo;
 
-        public TipController(ILogger<WeatherForecastController> logger, IRepo repo)
+        public TipController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
-            _sqlRepo = repo;
+            _sqlRepo = new SqlRepo();
         }
 
 
-        [HttpGet(Name = "tips")]
+        [HttpGet("tips")]
         public IEnumerable<Tip> GetAllTips()
         {
             return _sqlRepo.GetAllTips();
@@ -29,13 +29,40 @@ namespace ApiReader.Controllers
         {
             return _sqlRepo.GetTipById(id);
         }
+        
+        [HttpGet("tip/order{id}")]
+        public ActionResult<Tip> GetTipOrderById(int id)
+        {
+            return _sqlRepo.GetTipByOrderId(id);
+        }
 
-        // SaveTip(Tip tip)
+        [HttpPost]
+        public Tip SaveTip([FromBody] Tip newTip)
+        {
+            try
+            {
+                _sqlRepo.SaveTip(newTip);
+                var tips = _sqlRepo.GetAllTips();
+                var tip =  from t in tips
+                    where newTip.order_id == t.order_id
+                    select t;
+                return tip.First();
+            }
+            catch
+            {
+                return new Tip();
+            }
+        }
 
         [HttpDelete("tip/{id}")]
         public ActionResult<bool> DeleteTipById(int id)
         {
             return _sqlRepo.DeleteTipById(id);
+        }
+        [HttpDelete("tip/order{id}")]
+        public ActionResult<bool> DeleteTipByOrderId(int id)
+        {
+            return _sqlRepo.DeleteTipByOrderId(id);
         }
 
 
@@ -47,11 +74,11 @@ namespace ApiReader.Controllers
         }
 
 
-        // [HttpPost("tips")]
-        // public IEnumerable<Tip> LoadTipsFromFile()
-        // {
-        //     return _sqlRepo.L
-        // }
+        [HttpPost("tips/load")]
+        public IEnumerable<Tip> LoadTipsFromFile()
+        {
+            return _sqlRepo.LoadTipsFromFile();
+        }
 
 
 

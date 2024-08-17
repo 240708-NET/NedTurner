@@ -5,12 +5,13 @@ namespace CsvReader.Repo
 
 public class CsvLooker : IRepo
 {
+        static int counter =0;
         static string basePath = "../Files/Csv_Files/";
         static Tip tipper = new();
 
         public CsvLooker()
         {
-            Console.WriteLine("yo");
+            Console.WriteLine($"Use {counter++}");
         }
 
 
@@ -46,22 +47,6 @@ public class CsvLooker : IRepo
 
         }
 
-        
-        // public List<IObject> GetAll(IObject lister, string filePath)
-        // {
-        //     List<IObject> objectList = new();
-
-        //     List<List<string>> tipStringList = ReadEntireCsv(filePath);
-        //     tipStringList.RemoveAt(0);
-
-        //     foreach(List<string> rawTip in tipStringList)
-        //     {
-        //         // tips.Add(Tip.ListToTip(rawTip));
-        //         objectList.Add(lister.ListToObject(rawTip));
-        //     }
-        //     return objectList;
-
-        // }
 
         public void SaveAllTips(List<Tip> tipList)
         {
@@ -90,6 +75,10 @@ public class CsvLooker : IRepo
             throw new Exception("ID not found");
         }
 
+        public Tip GetTipByOrderId(int id)
+        {
+            return GetTipById(id);
+        }
 
         public void SaveTip(Tip tipToSave)
         {
@@ -118,7 +107,17 @@ public class CsvLooker : IRepo
 
         }
 
+        
+        public bool DeleteTipByOrderId(int order_id)
+        {
+            return DeleteTipById(order_id);
+        }
 
+
+        public List<Tip> LoadTipsFromFile()
+        {
+            return GetAllTips();
+        }
 
     
 
