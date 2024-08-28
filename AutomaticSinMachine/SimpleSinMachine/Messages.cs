@@ -589,16 +589,19 @@ quu..__
     }
 
     public void InitializeBootList(){
-        
-        this.bootMessages.Add("Beginning Penance Protocol");
-        this.bootMessages.Add("Accessing Angel Time");
-        this.bootMessages.Add("Initializing Temptation Threshold");
-        this.bootMessages.Add("Loading Daily Cringe Forecast");
-        this.bootMessages.Add("Calculating Profane Ratio");
-        this.bootMessages.Add("Encapsulating E.V.I.L. Packets");
-        this.bootMessages.Add("Preparing Aquinian Reference Table");
-        this.bootMessages.Add("Updating Insult Catalog");
-        this.bootMessages.Add("Is Someone There");
+        string[] bootMessages = {
+            "Beginning Penance Protocol",
+            "Accessing Angel Time",
+            "Initializing Temptation Threshold",
+            "Loading Daily Cringe Forecast",
+            "Calculating Profane Ratio",
+            "Encapsulating E.V.I.L. Packets",
+            "Preparing Aquinian Reference Table",
+            "Updating Insult Catalog",
+            "Is Someone There"
+        };
+
+        this.bootMessages.AddRange(bootMessages);
     }
 
     public void InitializeComputeList(){

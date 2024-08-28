@@ -1,46 +1,14 @@
-Crudelia Onswitch
-Sir Ogden Allthetime
-Bewilderforce Underside
-Samantha Bevelhead
-Norman Humanman
-Merci Marquis
+awkwardly had to show my id
+
+asked how much experience I had, which is weird considering that I'm in a training program
+
+weird start with 5+"7"
+
+bi
+
+value and reference type vs primitive and object
 
 
-Home Invasion
-TV/VCR Repair
-Infotainment Technology
-Insider Trading 101
-Western Clown Orthodoxy in the Renaissance
-Lace Making History II
-Esoteric Understandment
-Cheating 101
-Post Modern Entomology
-Veterinary Cat Buglary
-Ghost Writing WIP
-Ghost Writing Whip
+asked about session states
 
-
-
-Sleve McDichael
-Onson Sweemey
-Darryl Archideld
-Anatoli Smorin
-Rey McSriff
-Glenallen Mixon
-Mario McRlwain
-Raul Chamgerlain
-Kevin Nogilny
-Tony Smehrik
-Bobson Dugnutt
-Willie Dustice
-Jeromy Gride
-Scott Dourque
-Shown Furcotte
-Dean Wesrey
-Mike Truk
-Dwight Rortugal
-Tim Sandaele
-Karl Dandleton
-Mike Sernandez
-Todd Bonzalez
-
+asked about the very specific things of global variable
